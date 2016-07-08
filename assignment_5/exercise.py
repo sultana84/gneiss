@@ -29,10 +29,23 @@ def get_fall_time(height):
     acceleration_by_gravity = 9.8
 
     # replace with logic of above equation
-     
+    time_elapsed = sqrt((2 * height) / acceleration_by_gravity)
+    print(time_elapsed)
+    return(time_elapsed)
+
+
+print(get_fall_time(2))
+print(get_fall_time(4))
+print(get_fall_time(6))
+print(get_fall_time(8))
+ 
 
 def isVulnerable(tower_height, tower_x, tower_y, target_x, target_y):
     muzzle_velocity = 300
 
     # update this line to calculate time_in_air using get_fall_time() function
-    time_in_air =  
+    time_in_air = get_fall_time
+
+    tower_range = time_in_air * muzzle_velocity
+
+    delta_x = or:  
