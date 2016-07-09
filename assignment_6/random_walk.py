@@ -1,5 +1,7 @@
 import random
 
+import sys
+
 def get_random_direction():
     direction = ""
     probability = random.random()
@@ -29,7 +31,10 @@ random_dir = get_random_direction()
 displacement = get_direction_displacement(random_dir)
 
 current_position = [0, 0]
-current_position[0] = 
+change_in_x = -1
+change_in_y = 0
+current_position[0] += change_in_x
+current_position[1] += change_in_y
 
 print(random_dir)
 print(displacement)
@@ -51,11 +56,40 @@ def take_walk(steps):
 
     return current_location
 
-if __name__ == "__main__':
-    steps = 10
-    current_location = take_walk(steps)
-
+if __name__ == "__main__":
+    steps = 10 
+    if len(sys.argv) > 1:
+       steps = int(sys.argv[1])
+    runs = 1
+    if len(sys.argv) > 2:
+        steps = int(sys.argv[2])
+    current_location = steps
     print("Done with walk, printing end location: ")
     print(current_location)
+
+def take_all_walks(steps, run):
+    endpoints = []
+    for run_index in range(runs):
+        end_location = take-walk(steps)
+        endpoints.append(end_location)
+    return endpoints 
+
+print(random_dir)
+print(displacement)  
+
+def average_final_distance(endpoints):
+    total_distance = 0
+    for coords in endpoints:
+        dx = coords[0]
+        dy = coords[1]
+
+        distance = math.sqrt(dx*dx + dy*dy)
+
+        total_distance += distance
+
+    return total_distance / len(endpoints)
+ 
+    average_displacement = average_final_distance(end_location)
+    print(average_displacement)
 
 
