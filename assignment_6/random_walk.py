@@ -38,3 +38,24 @@ def take_walk(steps):
     current_location = [0, 0]
     for step_index in range(steps):
         direction = get_random_direction()
+
+        displacement = get_direction_displacement(direction)
+
+        # extract the numerical values from the tuple
+        delta_x = displacement[0]
+        delta_y = displacement[1]
+
+        # UPDATE current_location HERE
+        # consult example in 'Storing and updating State' for method to update
+        # current_location
+
+    return current_location
+
+if __name__ == "__main__':
+    steps = 10
+    current_location = take_walk(steps)
+
+    print("Done with walk, printing end location: ")
+    print(current_location)
+
+
