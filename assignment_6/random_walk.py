@@ -29,10 +29,10 @@ random_dir = get_random_direction()
 displacement = get_direction_displacement(random_dir)
 
 current_position = [0, 0]
-current_position[0] = 
-
-print(random_dir)
-print(displacement)
+change_in_x = -1
+change_in_y = 0
+current_position[0] += change_in_x
+current_position[0] += change_in_y 
 
 def take_walk(steps):
     current_location = [0, 0]
@@ -51,11 +51,19 @@ def take_walk(steps):
 
     return current_location
 
-if __name__ == "__main__':
+if __name__ == "__main__":
     steps = 10
-    current_location = take_walk(steps)
+    if len(sys.argv) > 1:
+        steps = int(sys.argv[1])
+    runs = 1
+    if len(sys.argv[2])
+        steps = int(sys.argc[2])
+    current_location = steps 
+   
 
     print("Done with walk, printing end location: ")
     print(current_location)
 
+print(random_dir)
+print(displacement)
 
