@@ -34,10 +34,14 @@ current_position = [0, 0]
 change_in_x = -1
 change_in_y = 0
 current_position[0] += change_in_x
+<<<<<<< HEAD
 current_position[1] += change_in_y
 
 print(random_dir)
 print(displacement)
+=======
+current_position[0] += change_in_y 
+>>>>>>> 97552a74a2c7777cc78bd6b98cea49e9495de2e9
 
 def take_walk(steps):
     current_location = [0, 0]
@@ -57,6 +61,7 @@ def take_walk(steps):
     return current_location
 
 if __name__ == "__main__":
+<<<<<<< HEAD
     steps = 10 
     if len(sys.argv) > 1:
        steps = int(sys.argv[1])
@@ -92,4 +97,20 @@ def average_final_distance(endpoints):
     average_displacement = average_final_distance(end_location)
     print(average_displacement)
 
+=======
+    steps = 10
+    if len(sys.argv) > 1:
+        steps = int(sys.argv[1])
+    runs = 1
+    if len(sys.argv[2])
+        steps = int(sys.argc[2])
+    current_location = steps 
+   
+
+    print("Done with walk, printing end location: ")
+    print(current_location)
+
+print(random_dir)
+print(displacement)
+>>>>>>> 97552a74a2c7777cc78bd6b98cea49e9495de2e9
 
